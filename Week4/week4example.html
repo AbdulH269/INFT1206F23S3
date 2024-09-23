@@ -6,9 +6,15 @@
     <title>Week 4</title>
 </head>
 <body>
-    <!-- Created a simple basic table-->
+    <!-- Created a simple basic table with HTML-->
     <h1>Week 4: HTML Tables</h1>
     <table border="1">
+        <!--Creating a colum group (changed color with the colum group)-->
+        <colgroup>
+            <col style="background-color: green;">
+            <col style="background-color: yellow;"> 
+            <col>
+        </colgroup>
         <!--Created the caption-->
         <caption>Students list at INFT1206</caption>
         <!--Created table row with data-->
@@ -36,6 +42,16 @@
         <!--Merged one cell to fill an entire column (3 is the amount of cells to fill)-->
         <tr>
             <td colspan="3">Abdul Hadi</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table border="1">
+                    <tr>
+                        <td>Cell 1</td>
+                        <td>Cell 2</td>
+                    </tr>
+                </table>
+            </td>
         </tr>
     </table>
 </body>
