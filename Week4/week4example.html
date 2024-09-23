@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4</title>
+</head>
+<body>
+    <!-- Created a simple basic table-->
+    <h1>Week 4: HTML Tables</h1>
+    <table border="1">
+        <!--Created the caption-->
+        <caption>Students list at INFT1206</caption>
+        <!--Created table row with data-->
+        <tr>
+            <th>No</th> 
+            <th>Name</th>
+            <th>Program</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Sam</td>
+            <!--Made the IT cover 2 rows-->
+            <td rowspan="2">IT</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Tom</td>
+            
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Mia</td>
+            <td>Programming</td>
+        </tr>
+        <!--Merged one cell to fill an entire column (3 is the amount of cells to fill)-->
+        <tr>
+            <td colspan="3">Abdul Hadi</td>
+        </tr>
+    </table>
+</body>
+</html>
