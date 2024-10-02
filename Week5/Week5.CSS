@@ -1,0 +1,13 @@
+/* Made External CSS header blue and made the title blue*/
+#id1{
+    color: blue;
+}
+h1{
+    font-size: 10px;
+}
+.type1{
+    text-decoration: underline;
+}
+div h2{
+    background-color: red;
+}
