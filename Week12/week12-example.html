@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Creating a Javascript function for validation
+        function validateInput(){
+            let name = document.querySelector('#fname').value.trim();
+
+            if(name==""){
+                document.querySelector('#error').textContent="You must enter your first name";
+                return false;
+            }
+            name = name.toUpperCase();
+            for(let i=0;i<name.length;i++){
+                if(name[i]<'A' ||name[i]>'Z'){
+                    document.querySelector('#error').textContent="All  characters must be alphabet"
+                } 
+            }
+            return true;
+
+        }
+            
+    </script>
+    <title>Week 12</title>
+</head>
+<body>
+    <h1>Week 12: Introduction to Forms</h1>
+    <!--How to create a Form-->
+    <form action="#" method="get" onsubmit="return validateInput();">
+        <!--How to create a textbox-->
+        <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required title="First Name">
+            <span id="error"></span>
+        </div>
+        <!--How to create a password-->
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" placeholder="Password">
+            
+        </div>
+        <!--How to create a file-->
+        <div>
+            <label for="assignment">Upload your assignment</label>
+            <input type="file" name="" id="assignment">
+        </div>
+        <!--How to create a checkbox-->
+        <div>
+            <p>What are your hobbies or interests?</p>
+            <input type="checkbox" name="interest" id="interest1" value="Sport">
+            <label for="interest1">Sport</label>
+            <input type="checkbox" name="interest" id="interest2" value="Music">
+            <label for="interest2">Music</label>
+        </div>
+        <!--How to create radio buttons on a form-->
+        <div>
+            <p>Which OS do you prefer?</p>
+            <input type="radio" name="os" id="os1" value="Windows" checked>
+            <label for="os1">Windows</label>
+            <input type="radio" name="os" id="os2" value="os2">
+            <label for="os2">Linux</label>
+        </div>
+        <!--How to create a drop down box-->
+        <div>
+            <label for="weekend">What do you want to do this weekend</label>
+            <select name="weekend" id="weekend" size="2">
+                <option value="coffee">Drink Coffee</option>
+                <option value="book">Read a Book</option>
+                <option value="walk">Take a Walk</option>
+            </select>
+        </div>
+        <!--How to add a textarea in a form-->
+        <div>
+            <label for="">How is the web development so far?</label> <br>
+            <textarea name="web" id="web" rows="6"></textarea>
+        </div>
+        <!--How to add a numer box with only numbers and with a max and min-->
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" min="14" max="99">
+        </div>
+        <!--How to create buttons for a form-->
+        <div>
+            <input type="submit" id="submit" name="submit">
+            <input type="reset" id="reset" name="reset">
+            <input type="button" value="GO">
+        </div>
+    </form>
+</body>
+</html>
