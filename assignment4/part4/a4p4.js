@@ -78,13 +78,38 @@ class Ball extends Shape {
     }
 }
 
+class EvilCircle extends Shape {
+    constructor(x, y) {
+      super(x, y, 20, 20); 
+      this.color = "white";
+      this.size = 10;
+  
+      
+      window.addEventListener("keydown", (e) => {
+        switch (e.key) {
+          case "a": 
+            this.x -= this.velX;
+            break;
+          case "d": 
+            this.x += this.velX;
+            break;
+          case "w": 
+            this.y -= this.velY;
+            break;
+          case "s": 
+            this.y += this.velY;
+            break;
+        }
+      });
+    }
+  }
+  
+
 const balls = [];
 
 while (balls.length < 25) {
     const size = random(10, 20);
     const ball = new Ball(
-        // ball position always drawn at least one ball width
-        // away from the edge of the canvas, to avoid drawing errors
         random(0 + size, width - size),
         random(0 + size, height - size),
         random(-7, 7),
