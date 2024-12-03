@@ -144,7 +144,7 @@ class EvilCircle extends Shape {
       
 
       
-  }
+}
   
 
 const balls = [];
@@ -176,5 +176,27 @@ function loop() {
     requestAnimationFrame(loop);
 }
       
-loop();
+
+
+const evilCircle = new EvilCircle(100, 100); 
+
+
+function loop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height); 
   
+  for (const ball of balls) {
+    if (ball.exists) { 
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
+  }
+
+  evilCircle.draw();
+  evilCircle.checkBounds();
+  evilCircle.collisionDetect();
+
+  requestAnimationFrame(loop); 
+}
+
+loop();
