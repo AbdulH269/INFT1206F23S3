@@ -136,6 +136,8 @@ class EvilCircle extends Shape {
       
             if (distance < this.size + ball.size) {
               ball.exists = false; 
+              ballCount--;
+              updateBallCountDisplay()
             }
           }
         }
@@ -148,6 +150,7 @@ class EvilCircle extends Shape {
   
 
 const balls = [];
+let ballCount = 0;
 
 while (balls.length < 25) {
     const size = random(10, 20);
@@ -161,6 +164,13 @@ while (balls.length < 25) {
     );
 
     balls.push(ball);
+    ballCount++;
+}
+
+const ballCountElement = document.getElementById("ballCount")
+
+function updateBallCountDisplay(){
+    ballCountElement.textContent = "Ball count: " + ballCount
 }
 
 function loop() {
@@ -196,6 +206,7 @@ function loop() {
   evilCircle.checkBounds();
   evilCircle.collisionDetect();
 
+  updateBallCountDisplay();
   requestAnimationFrame(loop); 
 }
 
