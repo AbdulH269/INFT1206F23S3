@@ -173,21 +173,6 @@ function updateBallCountDisplay(){
     ballCountElement.textContent = "Ball count: " + ballCount
 }
 
-function loop() {
-    ctx.fillStyle = "rgb(0 0 0 / 25%)";
-    ctx.fillRect(0, 0, width, height);
-      
-    for (const ball of balls) {
-        ball.draw();
-        ball.update();
-        ball.collisionDetect();
-    }
-      
-    requestAnimationFrame(loop);
-}
-      
-
-
 const evilCircle = new EvilCircle(100, 100); 
 
 
