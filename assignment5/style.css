@@ -52,7 +52,7 @@ p, li, table {
 /* || header layout */
 
 div[class="nav"], article, footer, .secondary {
-  background-color: green;
+  background-color: white;
 }
 
 article, footer, .secondary {
@@ -173,7 +173,7 @@ audio {
 /* Comments styling */
 
 .comments {
-  background-color: #def;
+  background-color: rgb(221, 221, 238);
   padding: 10px;
 }
 
